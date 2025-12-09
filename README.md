@@ -5,6 +5,7 @@
 - Bekzod Obidov - 323161
 - Bhoomi Tek Bahadur Singh - 305411
 - Assylzhan Sayatuly - 315931
+- Ata Cagan Pisirici - 314351
 
 ## 1. Introduction
 
