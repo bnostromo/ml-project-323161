@@ -108,13 +108,14 @@ PCA Observations
 The PCA visualization provided a helpful first look at the dataset. Some categories formed clear, separate clouds of points, suggesting they have very distinct visual features. Others were partially mixed or heavily overlapped, which matches our expectations for categories that look similar (e.g., objects with similar textures or colors). This confirmed that the dataset contains both well-defined and ambiguous visual groups.
 
 Clustering Outcomes-
-K-Means:
+
+1. K-Means:
 K-Means captured the broad structure of the dataset but was sensitive to the choice of k. When k was too small, visually different categories were merged; when k was too large, natural groups were split unnecessarily. Still, it performed reasonably well for categories with strong visual distinctions.
 
-Agglomerative Clustering:
+2. Agglomerative Clustering:
 This method produced the most visually meaningful clusters, especially with ward linkage. The clusters were more compact and separated, and the results aligned well with what we saw in the PCA plot. This approach also highlighted relationships between categories, which is valuable in an exploratory setting.
 
-Gaussian Mixture Models:
+3. Gaussian Mixture Models:
 GMM handled overlapping regions better than K-Means or Agglomerative Clustering. Categories with subtle differences (like similar shapes or textures) were represented more accurately because GMM allows images to belong partially to more than one cluster. This gave us a smoother, more flexible view of the visual space.
 
 Metric Summary-
