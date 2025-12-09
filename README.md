@@ -74,7 +74,36 @@ Scaling → PCA → Clustering → Interpretation
 
 
 ## 3. Experimental Design
+ 
+The main idea behind our experiments was to understand how the PatternMind images naturally group together once they are turned into numerical features. Since our goal is exploration rather than classification, we designed experiments that help reveal the structure of the visual space and how different categories relate to one another.
 
+Approach-
+
+We began by extracting HOG and color histogram features from all images and standardizing them. Before running any clustering, we applied PCA to reduce the feature space to two components. This gave us a simple visual baseline of how the dataset is organized without any algorithmic influence
+
+Clustering Experiments-
+
+We then tested several clustering algorithms, each chosen to give a different perspective on the structure of the data:
+
+K-Means:
+We experimented with multiple values of k to see how the dataset behaves when forced into different numbers of groups. This helped us understand whether the visual categories naturally form a certain number of clusters.
+
+Agglomerative Clustering:
+Using different linkage methods (ward, complete, average), we explored how the images merge into groups step-by-step. This method gave us insight into hierarchical relationships and which categories are closer or farther apart in feature space.
+
+Gaussian Mixture Models (GMM):
+Because not all images belong cleanly to a single category, we included GMM to allow for “soft” cluster assignments. This approach is useful when two categories have overlapping visual characteristics.
+
+Evaluation Strategy-
+
+To understand how well each method captured the dataset’s structure, we used several evaluation metrics:
+
+Silhouette Score – measures how well images fit within their assigned cluster
+Davies–Bouldin Score – indicates overall cluster quality
+Adjusted Rand Index (ARI) – checks how closely clusters align with the original labels
+Normalized Mutual Information (NMI) – measures shared information between labels and clusters
+
+Together, these evaluations helped us compare models and understand the strengths and weaknesses of each clustering approach.
 
 ## 4. Results
 
