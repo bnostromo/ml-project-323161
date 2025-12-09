@@ -14,7 +14,7 @@ The dataset contains many labeled images from various categories (e.g., butterfl
 planes, etc.). We extract interpretable features (HOG + color histograms) and apply
 dimensionality reduction and clustering methods to uncover the underlying organization of the
 visual space.
-The final goal is insight, not accuracy — understanding what themes emerge, how categories
+The final goal is insight, not accuracy but to understand what themes emerge, how categories
 relate, and where ambiguity exists.
 
 
