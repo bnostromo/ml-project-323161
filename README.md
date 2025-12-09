@@ -2,9 +2,9 @@
 
 
 ## Team Members
-Bekzod Obidov - 323161
-Bhoomi Tek Bahadur Singh - 305411
-Assylzhan Sayatuly - 315931
+- Bekzod Obidov - 323161
+- Bhoomi Tek Bahadur Singh - 305411
+- Assylzhan Sayatuly - 315931
 
 ## 1. Introduction
 
