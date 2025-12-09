@@ -106,7 +106,36 @@ Normalized Mutual Information (NMI) – measures shared information between labe
 Together, these evaluations helped us compare models and understand the strengths and weaknesses of each clustering approach.
 
 ## 4. Results
+PCA Observations
 
+The PCA visualization provided a helpful first look at the dataset. Some categories formed clear, separate clouds of points, suggesting they have very distinct visual features. Others were partially mixed or heavily overlapped, which matches our expectations for categories that look similar (e.g., objects with similar textures or colors). This confirmed that the dataset contains both well-defined and ambiguous visual groups.
+
+Clustering Outcomes
+K-Means:
+K-Means captured the broad structure of the dataset but was sensitive to the choice of k. When k was too small, visually different categories were merged; when k was too large, natural groups were split unnecessarily. Still, it performed reasonably well for categories with strong visual distinctions.
+
+Agglomerative Clustering:
+This method produced the most visually meaningful clusters, especially with ward linkage. The clusters were more compact and separated, and the results aligned well with what we saw in the PCA plot. This approach also highlighted relationships between categories, which is valuable in an exploratory setting.
+
+Gaussian Mixture Models:
+GMM handled overlapping regions better than K-Means or Agglomerative Clustering. Categories with subtle differences (like similar shapes or textures) were represented more accurately because GMM allows images to belong partially to more than one cluster. This gave us a smoother, more flexible view of the visual space.
+
+Metric Summary
+Across the metrics:
+
+Agglomerative (ward) generally produced the strongest cluster separation
+GMM performed best on ARI and NMI for categories with visual ambiguity
+K-Means worked well but was less stable when category boundaries were unclear
+
+Visual Insights-
+
+By inspecting example images from each cluster:
+
+We found clusters that naturally captured themes like color dominance, shape structure, or texture patterns.
+Some categories consistently clustered together, showing strong internal consistency.
+Mis-clustered images tended to be visually ambiguous, confirming that the dataset contains natural overlap between certain categories.
+
+The combination of PCA, clustering, and feature extraction allowed us to build a clearer picture of how PatternMind’s visual categories relate, overlap, and separate in feature space.
 
 ## 5. Conclusions
 
