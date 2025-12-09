@@ -83,22 +83,22 @@ We began by extracting HOG and color histogram features from all images and stan
 Clustering Experiments-
 We then tested several clustering algorithms, each chosen to give a different perspective on the structure of the data:
 
-K-Means:
+1. K-Means:
 We experimented with multiple values of k to see how the dataset behaves when forced into different numbers of groups. This helped us understand whether the visual categories naturally form a certain number of clusters.
 
-Agglomerative Clustering:
+2. Agglomerative Clustering:
 Using different linkage methods (ward, complete, average), we explored how the images merge into groups step-by-step. This method gave us insight into hierarchical relationships and which categories are closer or farther apart in feature space.
 
-Gaussian Mixture Models (GMM):
+3. Gaussian Mixture Models (GMM):
 Because not all images belong cleanly to a single category, we included GMM to allow for “soft” cluster assignments. This approach is useful when two categories have overlapping visual characteristics.
 
 Evaluation Strategy-
 To understand how well each method captured the dataset’s structure, we used several evaluation metrics:
 
-Silhouette Score – measures how well images fit within their assigned cluster
-Davies–Bouldin Score – indicates overall cluster quality
-Adjusted Rand Index (ARI) – checks how closely clusters align with the original labels
-Normalized Mutual Information (NMI) – measures shared information between labels and clusters
+* Silhouette Score – measures how well images fit within their assigned cluster
+* Davies–Bouldin Score – indicates overall cluster quality
+* Adjusted Rand Index (ARI) – checks how closely clusters align with the original labels
+* Normalized Mutual Information (NMI) – measures shared information between labels and clusters
 
 Together, these evaluations helped us compare models and understand the strengths and weaknesses of each clustering approach.
 
@@ -120,16 +120,16 @@ GMM handled overlapping regions better than K-Means or Agglomerative Clustering.
 Metric Summary-
 Across the metrics:
 
-Agglomerative (ward) generally produced the strongest cluster separation
-GMM performed best on ARI and NMI for categories with visual ambiguity
-K-Means worked well but was less stable when category boundaries were unclear
+1. Agglomerative (ward) generally produced the strongest cluster separation
+2. GMM performed best on ARI and NMI for categories with visual ambiguity
+3. K-Means worked well but was less stable when category boundaries were unclear
 
 Visual Insights-
 By inspecting example images from each cluster:
 
-We found clusters that naturally captured themes like color dominance, shape structure, or texture patterns.
-Some categories consistently clustered together, showing strong internal consistency.
-Mis-clustered images tended to be visually ambiguous, confirming that the dataset contains natural overlap between certain categories.
+1. We found clusters that naturally captured themes like color dominance, shape structure, or texture patterns.
+2. Some categories consistently clustered together, showing strong internal consistency.
+3. Mis-clustered images tended to be visually ambiguous, confirming that the dataset contains natural overlap between certain categories.
 
 The combination of PCA, clustering, and feature extraction allowed us to build a clearer picture of how PatternMind’s visual categories relate, overlap, and separate in feature space.
 
