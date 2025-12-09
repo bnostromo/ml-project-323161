@@ -120,16 +120,16 @@ GMM handled overlapping regions better than K-Means or Agglomerative Clustering.
 Metric Summary-
 Across the metrics:
 
-1. Agglomerative (ward) generally produced the strongest cluster separation
-2. GMM performed best on ARI and NMI for categories with visual ambiguity
-3. K-Means worked well but was less stable when category boundaries were unclear
+* Agglomerative (ward) generally produced the strongest cluster separation
+* GMM performed best on ARI and NMI for categories with visual ambiguity
+* K-Means worked well but was less stable when category boundaries were unclear
 
 Visual Insights-
 By inspecting example images from each cluster:
 
-1. We found clusters that naturally captured themes like color dominance, shape structure, or texture patterns.
-2. Some categories consistently clustered together, showing strong internal consistency.
-3. Mis-clustered images tended to be visually ambiguous, confirming that the dataset contains natural overlap between certain categories.
+* We found clusters that naturally captured themes like color dominance, shape structure, or texture patterns.
+* Some categories consistently clustered together, showing strong internal consistency.
+* Mis-clustered images tended to be visually ambiguous, confirming that the dataset contains natural overlap between certain categories.
 
 The combination of PCA, clustering, and feature extraction allowed us to build a clearer picture of how PatternMind’s visual categories relate, overlap, and separate in feature space.
 
